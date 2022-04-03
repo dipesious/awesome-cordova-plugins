@@ -1,6 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Cordova, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-plugins/core';
 
+
+/*
+VERY IMPORTANT!
+Update for an issue in Android resolved by @dipesious
+- You will get an array of different packages as a .catch(error)
+- This means you did not add QUERY_ALL_PACKAGES permission to your manifest.
+Add this to your Android manifest file:
+```
+  <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+```
+congratulations
+BUG RESOLVED...
+*/
+
+
+
 /**
  * @name Social Sharing
  * @premier social-sharing
